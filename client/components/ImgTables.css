@@ -1,0 +1,23 @@
+.img_item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 50px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.opt {
+	flex-shrink: 0;
+}
+
+.view {
+	color: #0F73E6;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0 6px;
+}
+
+.disable {
+	color: #999;
+	cursor: not-allowed;
+}

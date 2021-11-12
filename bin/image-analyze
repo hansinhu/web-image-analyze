@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+const parseArgs = require('minimist')
+const open = require('open')
+const app = require('../dist/server/app').default
+
+const argv = parseArgs(process.argv.slice(2), {
+  alias: {
+    h: 'help',
+    H: 'hostname',
+    p: 'port'
+  },
+  boolean: ['h'],
+  string: ['H'],
+  default: { p: 3003 }
+})
+
+app.listen(argv.port, () => {
+	const url = `http://localhost:${argv.port}`
+	console.log(`start width: ${url}`)
+	open(url)
+})
